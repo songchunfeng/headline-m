@@ -1,3 +1,4 @@
+// 校验模块
 import Vue from 'vue'
 
 // 加载需要使用的验证组件

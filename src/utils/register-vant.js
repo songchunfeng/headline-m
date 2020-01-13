@@ -1,3 +1,4 @@
+// vant引入
 import Vue from 'vue'
 import {
   Button,
@@ -7,7 +8,18 @@ import {
   Field,
   Icon,
   Toast,
-  CountDown
+  CountDown,
+  Tabbar,
+  TabbarItem,
+  Image,
+  Grid,
+  GridItem,
+  Tag,
+  Dialog,
+  List,
+  Tab,
+  Tabs,
+  PullRefresh
 } from 'vant'
 
 Vue
@@ -19,3 +31,14 @@ Vue
   .use(Icon)
   .use(Toast)
   .use(CountDown)
+  .use(Tabbar)
+  .use(TabbarItem)
+  .use(Image)
+  .use(Grid)
+  .use(GridItem)
+  .use(Tag)
+  .use(Dialog)
+  .use(List)
+  .use(Tab)
+  .use(Tabs)
+  .use(PullRefresh)

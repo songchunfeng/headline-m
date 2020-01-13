@@ -81,8 +81,11 @@ export default {
         message: '登录中...' // 提示消息
       })
       try {
-        await login(this.user)
+        const result = await login(this.user)
+        // 登陆成功后获取用户token，传给store中的user
+        this.$store.commit('setUser', result.data.data)
         this.$toast.success('登录成功')
+        this.$router.push('/')
       } catch (error) {
         this.$toast.fail('登录失败，手机号或验证码错误')
       }

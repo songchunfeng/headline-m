@@ -4,7 +4,12 @@
     <!-- v-model控制下拉刷新load状态，refresh触发新的事件 -->
   <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
       <!-- <div>{{channel.name}}</div> -->
-    <van-cell v-for="(article,index) in list" :key="index" :title="article.title" />
+    <van-cell
+    v-for="(article,index) in list"
+    :key="index"
+    :title="article.title"
+    @click="$router.push('/article/'+ article.art_id)"
+    />
   </van-list>
 </van-pull-refresh>
 </template>
